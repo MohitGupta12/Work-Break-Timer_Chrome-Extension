@@ -1,0 +1,65 @@
+@import 'config';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: $pri-dark;
+    color: $pri-light;
+}
+
+.extension{
+    padding: 0 3rem;
+}
+
+.watch{
+    text-align: center;
+    background-color: $pri-darker;
+    width: 100%;
+    max-width: 360px;
+    margin: 2rem auto;
+    padding: 1rem ;
+    border-radius: 1rem;
+
+
+    .timer{
+        font-size: 5rem;
+        font-weight: 300;
+        margin-bottom: 1rem;        
+    }
+
+    .controls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button{
+            appearance: none;
+            background: none;
+            border: none;
+            outline: none;
+            user-select: none;
+            cursor: pointer;
+
+            color: $pri-light;
+            font-size: 1.05rem;
+            background-color: $pri-col;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.7rem;
+
+            transition:0.4s ;
+
+            &:hover{
+                opacity: 0.6;
+            }
+
+            &:active{
+                background-color: $pri-dark;
+            }
+        }
+    }
+}

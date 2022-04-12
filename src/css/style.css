@@ -1,0 +1,74 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background-color: #1f2937;
+  color: #e5e7ec;
+}
+
+.extension {
+  padding: 0 3rem;
+}
+
+.watch {
+  text-align: center;
+  background-color: #121a2c;
+  width: 100%;
+  max-width: 360px;
+  margin: 5rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.watch .timer {
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.watch .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.watch .controls button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  color: #e5e7ec;
+  font-size: 1.05rem;
+  background-color: #079185;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.watch .controls button:hover {
+  opacity: 0.6;
+}
+
+.watch .controls button:active {
+  background-color: #1f2937;
+}
+/*# sourceMappingURL=style.css.map */
