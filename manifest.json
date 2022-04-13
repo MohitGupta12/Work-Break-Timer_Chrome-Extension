@@ -5,7 +5,7 @@
     "manifest_version":3,
     "action":{
         "default_popup":"src/index.html",
-        "default_icon": "image/logo.png"
+        "default_icon": "Assets/image/logo.png"
 
     }
 }
