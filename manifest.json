@@ -3,9 +3,12 @@
     "name": "Work Break Timer",
     "version":"0.0.1",
     "manifest_version":3,
+    "icons":{
+        "16":"assets/image/logo.png",
+        "48":"assets/image/logo.png",
+        "128":"assets/image/logo.png"
+    },
     "action":{
-        "default_popup":"src/index.html",
-        "default_icon": "Assets/image/logo.png"
-
+        "default_popup":"src/index.html"
     }
 }
