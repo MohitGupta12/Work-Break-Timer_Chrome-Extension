@@ -8,7 +8,8 @@ const audio_el = document.getElementById('audio');
 let seconds = 0;
 let interval = null;
 let rep_completed = 1;
-let temp;
+let will_pause = false;
+let hrs,mins,secs,temp=0;
 audio_el.loop = true;
 
 //Event Listeners
@@ -22,9 +23,9 @@ reset_btn.addEventListener('click', reset)
 function timer() {
     
     seconds++;
-    let hrs = Math.floor(seconds / 3600);
-    let mins = Math.floor((seconds - (hrs * 3600)) / 60);
-    let secs = seconds % 60;
+     hrs = Math.floor(seconds / 3600);
+     mins = Math.floor((seconds - (hrs * 3600)) / 60);
+     secs = seconds % 60;
     
     if (secs < 10) secs = '0' + secs;
     if (mins < 10) {
@@ -48,28 +49,32 @@ function start(){
     if (interval) {
         return
     }
-    interval = setInterval(timer, 1000);
-
+    interval = setInterval(timer, 1);
+    will_pause = true;
 }
 
 function pause() {
     clearInterval(interval);
     interval = null;
     audio_el.pause();
-    rep_completed++;
-    console.log(rep_completed)
+    if ((hrs == temp) && will_pause) {
+       rep_completed++;
+    }
+    will_pause = false;
 }
 
 function reset() {
-    pause();
+    clearInterval(interval);
+    interval = null;
+    audio_el.pause();  
     seconds = 0;
-    time_el.innerText= `00:00:00`
+    time_el.innerText = `00:00:00`;
+    rep_completed = 1;
 }
 
 function RingAlarm() {
-    console.log("Ringing...")
-    pause();
-    rep_completed--;
+    clearInterval(interval);
+    interval = null;
     audio_el.play();
 }
 
